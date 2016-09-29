@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B2CE9E91D36B3C500C152CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2CE9E81D36B3C500C152CA /* AppDelegate.swift */; };
+		9B2CE9EB1D36B3C500C152CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2CE9EA1D36B3C500C152CA /* ViewController.swift */; };
+		9B2CE9F01D36B3C500C152CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B2CE9EF1D36B3C500C152CA /* Assets.xcassets */; };
+		9B2CE9FD1D36E4BA00C152CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2CE9FC1D36E4BA00C152CA /* CoreLocation.framework */; };
+		9B592E981D89E352006C8C11 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBC81FC1D5D0C4900063413 /* FBSDKShareKit.framework */; };
+		9B592E9A1D89E35D006C8C11 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B592E991D89E35D006C8C11 /* FBSDKLoginKit.framework */; };
+		9B592E9B1D89E366006C8C11 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BBC81F81D5D0C2700063413 /* FBSDKCoreKit.framework */; };
+		9B592E9C1D89E372006C8C11 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BDBDCE61D6F42F700842454 /* Bolts.framework */; };
+		9BAE846D1D42C9D60062ED09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE846C1D42C9D60062ED09 /* LoginViewController.swift */; };
+		9BBC81DE1D50FA3100063413 /* ColorPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBC81DD1D50FA3100063413 /* ColorPointAnnotation.swift */; };
+		9BBC82021D6219D700063413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BBC82011D6219D700063413 /* Main.storyboard */; };
+		9BED49A21D89A8F200C204B8 /* UserDataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED49A11D89A8F200C204B8 /* UserDataTable.swift */; };
+		9BED49A41D89A92700C204B8 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED49A31D89A92700C204B8 /* UserData.swift */; };
+		9BED49A61D89A99D00C204B8 /* NoSQLTableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED49A51D89A99D00C204B8 /* NoSQLTableFactory.swift */; };
+		9BED49A81D89A9C500C204B8 /* PatrolsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED49A71D89A9C500C204B8 /* PatrolsTable.swift */; };
+		9BED49AA1D89A9E200C204B8 /* Patrols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED49A91D89A9E200C204B8 /* Patrols.swift */; };
+		9BED49AC1D89AA0700C204B8 /* NoSQLModelHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BED49AB1D89AA0700C204B8 /* NoSQLModelHelpers.swift */; };
+		9BFFF86E1D761E8100E40FF8 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFFF86D1D761E8100E40FF8 /* AWSCore.framework */; };
+		9BFFF86F1D761E8100E40FF8 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFFF86D1D761E8100E40FF8 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9BFFF8721D761EA700E40FF8 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFFF8711D761EA700E40FF8 /* AWSDynamoDB.framework */; };
+		9BFFF8731D761EA700E40FF8 /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFFF8711D761EA700E40FF8 /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9BFFF8761D76207400E40FF8 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFFF8751D76207400E40FF8 /* AWSMobileClient.swift */; };
+		9BFFF8781D76208000E40FF8 /* AWSMobileHubHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFFF8771D76208000E40FF8 /* AWSMobileHubHelper.framework */; };
+		9BFFF87A1D76215600E40FF8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFFF8791D76215600E40FF8 /* libsqlite3.tbd */; };
+		9BFFF87C1D76216F00E40FF8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFFF87B1D76216F00E40FF8 /* libz.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9BFFF8701D761E8100E40FF8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9BFFF8731D761EA700E40FF8 /* AWSDynamoDB.framework in Embed Frameworks */,
+				9BFFF86F1D761E8100E40FF8 /* AWSCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9B2CE9E81D36B3C500C152CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9B2CE9EA1D36B3C500C152CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9B2CE9EF1D36B3C500C152CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B2CE9F21D36B3C500C152CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B2CE9F41D36B3C500C152CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B2CE9FC1D36E4BA00C152CA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9B592E991D89E35D006C8C11 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		9BAE846C1D42C9D60062ED09 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9BBC81DD1D50FA3100063413 /* ColorPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPointAnnotation.swift; sourceTree = "<group>"; };
+		9BBC81F81D5D0C2700063413 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		9BBC81FC1D5D0C4900063413 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		9BBC81FE1D5E91AC00063413 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		9BBC82011D6219D700063413 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9BDBDCE61D6F42F700842454 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		9BED49A01D87A75B00C204B8 /* ParkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BED49A11D89A8F200C204B8 /* UserDataTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataTable.swift; sourceTree = "<group>"; };
+		9BED49A31D89A92700C204B8 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		9BED49A51D89A99D00C204B8 /* NoSQLTableFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoSQLTableFactory.swift; sourceTree = "<group>"; };
+		9BED49A71D89A9C500C204B8 /* PatrolsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatrolsTable.swift; sourceTree = "<group>"; };
+		9BED49A91D89A9E200C204B8 /* Patrols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patrols.swift; sourceTree = "<group>"; };
+		9BED49AB1D89AA0700C204B8 /* NoSQLModelHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoSQLModelHelpers.swift; sourceTree = "<group>"; };
+		9BFFF86B1D761E0D00E40FF8 /* Sdk */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sdk; sourceTree = "<group>"; };
+		9BFFF86D1D761E8100E40FF8 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
+		9BFFF8711D761EA700E40FF8 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSDynamoDB.framework; sourceTree = "<group>"; };
+		9BFFF8751D76207400E40FF8 /* AWSMobileClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
+		9BFFF8771D76208000E40FF8 /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileHubHelper.framework; sourceTree = "<group>"; };
+		9BFFF8791D76215600E40FF8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9BFFF87B1D76216F00E40FF8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B2CE9E21D36B3C500C152CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B592E9C1D89E372006C8C11 /* Bolts.framework in Frameworks */,
+				9B592E9B1D89E366006C8C11 /* FBSDKCoreKit.framework in Frameworks */,
+				9B592E9A1D89E35D006C8C11 /* FBSDKLoginKit.framework in Frameworks */,
+				9B592E981D89E352006C8C11 /* FBSDKShareKit.framework in Frameworks */,
+				9BFFF87C1D76216F00E40FF8 /* libz.tbd in Frameworks */,
+				9BFFF87A1D76215600E40FF8 /* libsqlite3.tbd in Frameworks */,
+				9B2CE9FD1D36E4BA00C152CA /* CoreLocation.framework in Frameworks */,
+				9BFFF8781D76208000E40FF8 /* AWSMobileHubHelper.framework in Frameworks */,
+				9BFFF8721D761EA700E40FF8 /* AWSDynamoDB.framework in Frameworks */,
+				9BFFF86E1D761E8100E40FF8 /* AWSCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B2CE9DC1D36B3C500C152CA = {
+			isa = PBXGroup;
+			children = (
+				9B592E991D89E35D006C8C11 /* FBSDKLoginKit.framework */,
+				9BFFF87B1D76216F00E40FF8 /* libz.tbd */,
+				9BFFF8791D76215600E40FF8 /* libsqlite3.tbd */,
+				9BFFF8771D76208000E40FF8 /* AWSMobileHubHelper.framework */,
+				9BFFF8711D761EA700E40FF8 /* AWSDynamoDB.framework */,
+				9BFFF86D1D761E8100E40FF8 /* AWSCore.framework */,
+				9BFFF86B1D761E0D00E40FF8 /* Sdk */,
+				9BDBDCE61D6F42F700842454 /* Bolts.framework */,
+				9BBC81FC1D5D0C4900063413 /* FBSDKShareKit.framework */,
+				9BBC81F81D5D0C2700063413 /* FBSDKCoreKit.framework */,
+				9B2CE9FC1D36E4BA00C152CA /* CoreLocation.framework */,
+				9B2CE9E71D36B3C500C152CA /* ParkApp */,
+				9BED49A01D87A75B00C204B8 /* ParkApp.app */,
+			);
+			sourceTree = "<group>";
+		};
+		9B2CE9E71D36B3C500C152CA /* ParkApp */ = {
+			isa = PBXGroup;
+			children = (
+				9BFFF8751D76207400E40FF8 /* AWSMobileClient.swift */,
+				9B2CE9E81D36B3C500C152CA /* AppDelegate.swift */,
+				9BBC81FE1D5E91AC00063413 /* Bridging-Header.h */,
+				9BBC82011D6219D700063413 /* Main.storyboard */,
+				9B2CE9EA1D36B3C500C152CA /* ViewController.swift */,
+				9BED49AB1D89AA0700C204B8 /* NoSQLModelHelpers.swift */,
+				9BBC81DD1D50FA3100063413 /* ColorPointAnnotation.swift */,
+				9BAE846C1D42C9D60062ED09 /* LoginViewController.swift */,
+				9BED49A91D89A9E200C204B8 /* Patrols.swift */,
+				9BED49A71D89A9C500C204B8 /* PatrolsTable.swift */,
+				9BED49A51D89A99D00C204B8 /* NoSQLTableFactory.swift */,
+				9BED49A11D89A8F200C204B8 /* UserDataTable.swift */,
+				9BED49A31D89A92700C204B8 /* UserData.swift */,
+				9B2CE9EF1D36B3C500C152CA /* Assets.xcassets */,
+				9B2CE9F11D36B3C500C152CA /* LaunchScreen.storyboard */,
+				9B2CE9F41D36B3C500C152CA /* Info.plist */,
+			);
+			path = ParkApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B2CE9E41D36B3C500C152CA /* ParkApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B2CE9F71D36B3C500C152CA /* Build configuration list for PBXNativeTarget "ParkApp" */;
+			buildPhases = (
+				9B2CE9E11D36B3C500C152CA /* Sources */,
+				9B2CE9E21D36B3C500C152CA /* Frameworks */,
+				9B2CE9E31D36B3C500C152CA /* Resources */,
+				9BFFF8701D761E8100E40FF8 /* Embed Frameworks */,
+				9BFFF8741D761ED500E40FF8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParkApp;
+			productName = ParkApp;
+			productReference = 9BED49A01D87A75B00C204B8 /* ParkApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B2CE9DD1D36B3C500C152CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Michael Bharrat";
+				TargetAttributes = {
+					9B2CE9E41D36B3C500C152CA = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = U97XT4CY45;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 9B2CE9E01D36B3C500C152CA /* Build configuration list for PBXProject "ParkApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B2CE9DC1D36B3C500C152CA;
+			productRefGroup = 9B2CE9DC1D36B3C500C152CA;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B2CE9E41D36B3C500C152CA /* ParkApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B2CE9E31D36B3C500C152CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BBC82021D6219D700063413 /* Main.storyboard in Resources */,
+				9B2CE9F01D36B3C500C152CA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9BFFF8741D761ED500E40FF8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework/strip-frameworks.sh\" ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B2CE9E11D36B3C500C152CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BED49A61D89A99D00C204B8 /* NoSQLTableFactory.swift in Sources */,
+				9BFFF8761D76207400E40FF8 /* AWSMobileClient.swift in Sources */,
+				9BAE846D1D42C9D60062ED09 /* LoginViewController.swift in Sources */,
+				9BED49AC1D89AA0700C204B8 /* NoSQLModelHelpers.swift in Sources */,
+				9BED49A21D89A8F200C204B8 /* UserDataTable.swift in Sources */,
+				9BBC81DE1D50FA3100063413 /* ColorPointAnnotation.swift in Sources */,
+				9BED49A81D89A9C500C204B8 /* PatrolsTable.swift in Sources */,
+				9BED49A41D89A92700C204B8 /* UserData.swift in Sources */,
+				9B2CE9EB1D36B3C500C152CA /* ViewController.swift in Sources */,
+				9B2CE9E91D36B3C500C152CA /* AppDelegate.swift in Sources */,
+				9BED49AA1D89A9E200C204B8 /* Patrols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9B2CE9F11D36B3C500C152CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B2CE9F21D36B3C500C152CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B2CE9F51D36B3C500C152CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B2CE9F61D36B3C500C152CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B2CE9F81D36B3C500C152CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = U97XT4CY45;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = ParkApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mdb181.ParkingPatrol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParkApp/Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B2CE9F91D36B3C500C152CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = U97XT4CY45;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = ParkApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mdb181.ParkingPatrol;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParkApp/Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B2CE9E01D36B3C500C152CA /* Build configuration list for PBXProject "ParkApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B2CE9F51D36B3C500C152CA /* Debug */,
+				9B2CE9F61D36B3C500C152CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B2CE9F71D36B3C500C152CA /* Build configuration list for PBXNativeTarget "ParkApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B2CE9F81D36B3C500C152CA /* Debug */,
+				9B2CE9F91D36B3C500C152CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B2CE9DD1D36B3C500C152CA /* Project object */;
+}
