@@ -242,6 +242,9 @@
                         <constraint firstItem="JZ2-1D-Soi" firstAttribute="leading" secondItem="Bbu-1y-PXd" secondAttribute="leading" id="UlH-Cd-BPN"/>
                         <constraint firstItem="JZ2-1D-Soi" firstAttribute="top" secondItem="Bbu-1y-PXd" secondAttribute="top" id="W5E-An-ea7"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="geg-93-xC2" appends="YES" id="uiS-R2-9zd"/>
+                    </connections>
                 </view>
                 <view contentMode="scaleToFill" id="Cau-yw-PgJ">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -264,6 +267,11 @@
                         <outletCollection property="gestureRecognizers" destination="A7h-ly-FZd" appends="YES" id="hAu-lR-NIx"/>
                     </connections>
                 </view>
+                <swipeGestureRecognizer direction="right" id="geg-93-xC2">
+                    <connections>
+                        <action selector="onCloseFriend:" destination="pSI-Qw-36K" id="Hir-yT-zes"/>
+                    </connections>
+                </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="A7h-ly-FZd">
                     <connections>
                         <action selector="onCloseDir:" destination="pSI-Qw-36K" id="hxu-z7-sEz"/>

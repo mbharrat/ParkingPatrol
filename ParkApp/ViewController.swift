@@ -39,7 +39,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet var pickerView: UIView!
     @IBOutlet weak var direction: UITextView!
     @IBOutlet var dir: UIView!
-    var clickedLook = 0
+    var didFriend = false
     var loading = false
     var alertWalk1 = false
     var addTime = false
@@ -62,6 +62,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var destination:MKMapItem = MKMapItem() //destination aka where car is placed if placed
     var locationManager = CLLocationManager()
     @IBOutlet weak var Map: UIButton!
+    @IBOutlet weak var onAround: UIButton!
     @IBOutlet var friendView: UIView!
     @IBOutlet weak var Park: UIButton!
     @IBOutlet weak var Report: UIButton!
@@ -74,11 +75,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBAction func onFriend(sender: UIButton) {
         if Friends.selected == true {
             hideMenuFriend()
+            didFriend = false
             Friends.selected = false
             
         }else if Friends.selected == false{
             hideMenuDir()
             showMenuFriend()
+            didFriend = true
             Friends.selected = true
             
             let fbRequest = FBSDKGraphRequest(graphPath:"/me/friends", parameters: nil)
@@ -99,23 +102,33 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                     }
                 }
 
-        }
+            }
         }
 
     }
-    @IBOutlet weak var onAround: UIButton!
+
+    
     
     //when button is clicked, allow for pan of map
     @IBAction func onLook(sender: UIButton) {
-            self.locationManager.stopUpdatingLocation()
         if tempUser == 1{
             self.alertLook()
+        }
+        if onAround.selected == false{
+            self.locationManager.stopUpdatingLocation()
+            onAround.selected = true
+        }else{
+            self.locationManager.startUpdatingLocation()
+            onAround.selected = false
         }
     }
     //when two fingers tap twice, pull screen to user location
     //two finger tap
     @IBAction func onLookTap(sender: AnyObject) {
-        self.locationManager.startUpdatingLocation()
+        if onAround.selected == true {
+            self.locationManager.startUpdatingLocation()
+            onAround.selected = false
+        }
         //print("tap registered")
     }
     
@@ -238,14 +251,23 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         loginManager.logOut() // this is an instance function
     }
 //*************************************************************************************************************************
-//                      SWIPE GESTURE TO CLOSE DIRECTION MENU WHEN SWIPED LEFT
+//                      SWIPE GESTURES
 //*************************************************************************************************************************
+    //TO CLOSE DIRECTION MENU WHEN SWIPED LEFT
     @IBAction func onCloseDir(sender: UISwipeGestureRecognizer) {
         if didDirect == true {
             hideMenuDir()
             self.direction.text = nil
             didDirect = false
         }
+    }
+    //TO CLOSE FRIEND MENU WHEN SWIPED Right
+    @IBAction func onCloseFriend(sender: UISwipeGestureRecognizer) {
+        if didFriend == true {
+            hideMenuFriend()
+            didFriend = false
+        }
+        print("right swipe")
     }
 //*************************************************************************************************************************
 //                              picker conforming methods
