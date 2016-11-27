@@ -93,7 +93,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                         var i:Int = 0
                         for ; i<userNameArray.count ; i++ {
                             print(userNameArray[i].valueForKey("name"))
-                        }      
+                            let name = (userNameArray[i].valueForKey("name"))
+                            print(name!)
+                        }
                         
                     } else {
                         
